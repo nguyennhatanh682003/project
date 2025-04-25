@@ -1,0 +1,194 @@
+body {
+    background-color: rgb(242, 246, 250);
+    
+
+}
+
+main {
+    width: 100%;
+    margin: 50px 0;
+}
+
+main>div {
+    margin: 0 15%;
+}
+
+main>div>div {
+    box-shadow: 0px 0px 15px 1px grey;
+    background-color: white;
+}
+
+main>div>div #thongtinKhachHang {
+    padding: 15px 20px;
+    border-bottom: 1px solid rgb(196, 195, 195);
+}
+
+main>div>div #thongtinKhachHang form {
+    margin-top: 10px;
+}
+
+main>div>div #thongtinKhachHang form .heightInput {
+    height: 30px;
+}
+
+main>div>div .tongTien {
+    margin-top: 5px;
+    clear: both;
+    height: 50px;
+    padding: 0 20px;
+}
+
+main>div>div .tongTien h4 {
+    float: left;
+}
+
+main>div>div .tongTien div {
+    float: right;
+    margin-top: 17px;
+    color: red;
+}
+
+main>div>div .datHang {
+    text-align: center;
+    height: 80px;
+    padding: 0 20px;
+}
+
+main>div>div .datHang button {
+    width: 100%;
+    height: 40px;
+    background-color: #ff3333;
+    color: white;
+    border-radius: 5px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+form .widthInput {
+    width: 48%;
+}
+
+form input:last-child {
+    width: 98%;
+}
+
+main>div>div #thongtinKhachHang form #phai {
+    margin: 15px 0;
+}
+
+main>div>div #thongtinKhachHang form #labelCachNhanHang {
+    margin-top: 15px;
+}
+
+main>div>div #thongtinKhachHang form #radioCachNhanHang {
+    margin-bottom: 15px;
+}
+
+#radioCachNhanHang div {
+    display: inline-block;
+}
+
+main>div>div #thongtinKhachHang form .diachi {
+    margin-bottom: 5px;
+}
+
+main #cacsanpham {
+    padding: 0 20px;
+    padding-bottom: 10px;
+}
+
+main #cacsanpham .sanpham {
+    width: 100%;
+    border-top: 1px solid rgb(196, 195, 195);
+    margin-top: 10px;
+}
+
+main #cacsanpham .sanpham .imgSanPham {
+    display: inline-block;
+    width: 20%;
+}
+
+main #cacsanpham .sanpham .tenSanPham {
+    display: inline-block;
+    width: 60%;
+}
+
+main #cacsanpham .sanpham .giaSanPham {
+    display: inline-block;
+    width: 20%;
+    color: red;
+    text-align: right;
+}
+
+main #cacsanpham .sanpham .xoaSanpham {
+    display: inline-block;
+    width: 20%;
+}
+
+main #cacsanpham .sanpham .xoaSanpham a:hover {
+    cursor: pointer;
+}
+
+main #cacsanpham .sanpham .xoaSanpham a span {
+    color: #706e6e;
+}
+
+main #cacsanpham .sanpham .soluongSanPham {
+    display: inline-block;
+    width: 80%;
+    text-align: right;
+}
+
+main #cacsanpham .sanpham .soluongSanPham div {
+    display: inline-block;
+    margin-left: 15px;
+}
+
+main #cacsanpham .sanpham .soluongSanPham div span {
+    display: inline-block;
+    width: 15px;
+    margin-right: 5px;
+}
+
+@media (max-width:744px) {
+    form .widthInput {
+        width: 98%;
+        margin-bottom: 5px;
+    }
+}
+
+@media (max-width:511px) {
+    main #cacsanpham .sanpham .imgSanPham {
+        width: 100%;
+        margin-top: 20px;
+    }
+
+    main #cacsanpham .sanpham .tenSanPham {
+        width: 70%;
+    }
+
+    main #cacsanpham .sanpham .giaSanPham {
+        width: 30%;
+    }
+}
+
+@media (max-width:431px) {
+    main #cacsanpham .sanpham .tenSanPham {
+        width: 100%;
+    }
+
+    main #cacsanpham .sanpham .giaSanPham {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+}
+
+@media (max-width:331px) {
+    main #cacsanpham .sanpham .xoaSanpham {
+        width: 50%;
+    }
+
+    main #cacsanpham .sanpham .soluongSanPham {
+        width: 50%;
+    }
+}

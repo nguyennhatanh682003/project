@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trang chủ - Cửa hàng điện máy</title>
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/trangchu.css">
+    <link rel="stylesheet" href="../css/modal.css">
+    <link rel="stylesheet" href="../css/header.css">
+    <link rel="stylesheet" href="../css/topnav.css">
+    <script src="../js/jquery-3.6.0.min.js"></script>
+    <script type="module" src="../js/trangchu.js"></script>
+    <script src="../js/taikhoan.js"></script>
+    <script src="../js/responsive.js"></script>
+</head>
+
+<body>
+    <header>
+        <a href="trangchu.html" class="logo reloadTrang">
+            <img src="../img/logo.jpg" width="30" height="30" alt="logo ">
+            Store
+        </a>
+        <div class="search-container">
+            <form id="formSearch">
+                <input type="text" placeholder="Tìm kiếm sản phẩm  ..." id="inputTimkiem" name="search">
+                <button id="btnTimkiem"><i class="fa fa-search"></i></button>
+            </form>
+        </div>
+        <div class="header-right">
+            <a class="giohang" href="giohang.html">Giỏ hàng</a>
+            <div class="dropdown" id="dkdn">
+                <button class="dropbtn" onclick="toggle_dropdown()">Tài khoản
+                    <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-content" id="myDropdown">
+                    <a href="dangky.html">Đăng ký</a>
+                    <a href="dangnhap.html">Đăng nhập</a>
+                </div>
+            </div>
+            <div id="divTaikhoan" class="dropdown">
+                <button id="taikhoan" class="dropbtn"></button>
+                <div class="dropdown-content" id="ttTaikhoan">
+                    <ul id="info">
+                        <li><b>Tên đăng nhập: </b><span id="tenDangnhap"></span></li>
+                        <li><b>Mật khẩu: </b><span id="matkhau"></span><span id="passEye"><img width="22"
+                                    src="../img/closePassEye.png" alt=""></span></li>
+                        <li><b>Họ và tên: </b><span id="hoten"></span></li>
+                        <li><b>Số điện thoại: </b><span id="sdt"></span></li>
+                    </ul>
+                    <div>
+                        <button type="button" id="doiMK">Đổi mật khẩu</button>
+                        <button type="button" id="dangXuat">Đăng xuất</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <nav class="topnav" id="myTopnav">
+        <a href="trangchu.html" class="active">Trang chủ</a>
+        <a href="danhsachsanpham.html">Danh sách sản phẩm</a>
+        
+        
+        <a href="javascript:void(0);" class="icon" onclick="respond_topnav()">
+            <i class="fa fa-bars"></i>
+        </a>
+    </nav>
+    <main>
+        <div id="products"></div>
+    </main>
+    <footer>
+        <div>
+            <div>
+                <!-- <ul>
+                    <span>Thông tin về</span>
+                    
+                    
+                </ul> -->
+            </div>
+            <div>
+                <ul>
+                    <span>Dịch vụ khách hàng</span>
+                    <li><a href="#">Liên hệ chúng tôi</a></li>
+                    
+                    <li><a href="#">Khuyến mãi</a></li>
+                </ul>
+            </div>
+            <div>
+                <ul>
+                    <span>Tài khoản</span>
+                    <li><a href="#">Tài khoản của tôi</a></li>
+                    <li><a href="dangnhap.html">Đăng nhập</a></li>
+                    <li><a href="dangky.html">Đăng ký</a></li>
+                </ul>
+            </div>
+            <div>
+                <ul>
+                    <span>Sản phẩm</span>
+                    <li><a href="giohang.html">Giỏ hàng của tôi</a></li>
+                    <li><a href="#">Khuyến mãi</a></li>
+                    <li><a href="#">Kinh nghiệm mua hàng</a></li>
+                </ul>
+            </div>
+            <div>
+                <div>
+                    <p>Cửa hàng điện máy</p>
+                    <p>Address: Khu 7, Thị trấn Trạm Trôi, Hoài Đức, Hà Nội</p>
+                </div>
+                <div>
+                    <p><a href="#">Powered By Open Cart</a></p>
+                    <span>
+                        <img src="../img/bocongthuong.png" alt="" width="90">
+                    </span>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Modal -->
+
+    <!-- Modal thông báo đã thêm sản phẩm vào giỏ hàng -->
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <span class="close">&times;</span>
+                <h2>Đã thêm vào giỏ hàng</h2>
+            </div>
+            <div class="modal-body">
+                <h3 id="tenSP">Some text in the Modal Body</h3>
+                <p id="giaSP">Some other text...</p>
+            </div>
+            <div class="modal-footer">
+                <p>Xin cảm ơn!</p>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

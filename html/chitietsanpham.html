@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chi tiết sản phẩm </title>
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/chitietsanpham.css">
+    <link rel="stylesheet" href="../css/header.css">
+    <link rel="stylesheet" href="../css/topnav.css">
+    <script src="../js/jquery-3.6.0.min.js"></script>
+    <script type="module" src="../js/chitietsanpham.js"></script>
+    <script src="../js/taikhoan.js"></script>
+    <script src="../js/responsive.js"></script>
+    <script>
+        document.onreadystatechange = function () {
+            // Get the modal
+            var modal = document.getElementById("myModal")
+
+            // Get the image and insert it inside the modal - use its "alt" text as a caption
+            var img = document.getElementById("hinhanhSP")
+            var modalImg = document.getElementById("zoom_sitemap")
+            var captionText = document.getElementById("caption")
+
+            if (img.clientHeight < 20) {
+                return
+            }
+
+            img.onclick = function () {
+                modal.style.display = "block"
+                modalImg.src = this.src
+                captionText.innerHTML = this.alt
+            }
+
+            // Get the <span> element that closes the modal
+            var span = document.getElementsByClassName("close")[0]
+
+            // When the user clicks on <span> (x), close the modal
+            span.onclick = function () {
+                modal.style.display = "none"
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <header>
+        <a href="trangchu.html" class="logo reloadTrang">
+            <img src="../img/logo.jpg" width="30" height="30" alt="logo">
+            
+            Store
+        </a>
+        <div class="search-container">
+            <form id="formSearch">
+                <input type="text" placeholder="Nhập sản phẩm cần tìm ..." id="inputTimkiem" name="search">
+                <button id="btnTimkiem"><i class="fa fa-search"></i></button>
+            </form>
+        </div>
+        <div class="header-right">
+            <a class="giohang" href="giohang.html">Giỏ hàng</a>
+            <div class="dropdown" id="dkdn">
+                <button class="dropbtn" onclick="toggle_dropdown()">Tài khoản
+                    <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-content" id="myDropdown">
+                    <a href="dangky.html">Đăng ký</a>
+                    <a href="dangnhap.html">Đăng nhập</a>
+                </div>
+            </div>
+            <div id="divTaikhoan" class="dropdown">
+                <button id="taikhoan" class="dropbtn"></button>
+                <div class="dropdown-content" id="ttTaikhoan">
+                    <ul id="info">
+                        <li><b>Tên đăng nhập: </b><span id="tenDangnhap"></span></li>
+                        <li><b>Mật khẩu: </b><span id="matkhau"></span><span id="passEye"><img width="22"
+                                    src="../img/closePassEye.png" alt=""></span></li>
+                        <li><b>Họ và tên: </b><span id="hoten"></span></li>
+                        <li><b>Số điện thoại: </b><span id="sdt"></span></li>
+                    </ul>
+                    <div>
+                        <button type="button" id="doiMK">Đổi mật khẩu</button>
+                        <button type="button" id="dangXuat">Đăng xuất</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <nav class="topnav" id="myTopnav">
+        <a href="trangchu.html">Trang chủ</a>
+        <a href="danhsachsanpham.html">Danh sách sản phẩm</a>
+        
+       
+        <a href="javascript:void(0);" class="icon" onclick="respond_topnav()">
+            <i class="fa fa-bars"></i>
+        </a>
+    </nav>
+    <main>
+        <div>
+            <div>
+                <h3>Máy lạnh <span class="tenSP"></span></h3>
+            </div>
+            <div>
+                <div id="column1" class="column">
+                    <div>
+                        <img src="../img/panasonicInverter1HP_2.png" width="100%" alt="Hình ảnh về sản phẩm"
+                            id="hinhanhSP">
+                    </div>
+                </div>
+                <div id="column2" class="column">
+                    <span>GIÁ: </span>
+                    <span id="gia"></span>
+                    <div>
+                        <button id="muangay">MUA NGAY</button>
+                    </div>
+                    <h3>
+                        Thông số kỹ thuật Máy lạnh <span class="tenSP"></span>
+                    </h3>
+                    <div id="thongSoKyThuat">
+                        <div class="row">
+                            <span class="colTitle">Loại máy:</span>
+                            <span class="colContent" id="loaiMay"></span>
+                        </div>
+                        <div class="row">
+                            <span class="colTitle">Công suất làm lạnh:</span>
+                            <span class="colContent" id="congsuat"></span>
+                        </div>
+                        <div class="row">
+                            <span class="colTitle">Phạm vi làm lạnh hiệu quả:</span>
+                            <span class="colContent" id="phamviLamlanh"></span>
+                        </div>
+                        <div class="row">
+                            <span class="colTitle">Tiêu thụ điện:</span>
+                            <span class="colContent" id="tieuthuDien"></span>
+                        </div>
+                        <div class="row">
+                            <span class="colTitle">Công nghệ kháng khuẩn:</span>
+                            <span class="colContent" id="khangkhuan"></span>
+                        </div>
+                        <div class="row">
+                            <span class="colTitle">Công nghệ tiết kiệm điện:</span>
+                            <span class="colContent" id="tietkiemDien"></span>
+                        </div>
+                        <div class="row">
+                            <span class="colTitle">Tiện ích:</span>
+                            <span class="colContent" id="tienich"></span>
+                        </div>
+                        <div class="row">
+                            <span class="colTitle">Nơi sản xuất:</span>
+                            <span class="colContent" id="noiSanxuat"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="cacSP_tuongtu">
+                <h3>Các sản phẩm tương tự khác:</h3>
+            </div>
+        </div>
+    </main>
+    <!-- The Modal shows zoomed image -->
+    <div id="myModal" class="modal">
+        <span class="close">&times;</span>
+        <img class="modal-content" id="zoom_sitemap">
+        <div id="caption"></div>
+    </div>
+    <footer>
+        <div>
+            <div>
+                <!-- <ul>
+                    <span>Thông tin về</span>
+                    
+                    
+                </ul> -->
+            </div>
+            <div>
+                <ul>
+                    <span>Dịch vụ khách hàng</span>
+                    <li><a href="#">Liên hệ chúng tôi</a></li>
+                    
+                    <li><a href="#">Khuyến mãi</a></li>
+                </ul>
+            </div>
+            <div>
+                <ul>
+                    <span>Tài khoản</span>
+                    <li><a href="#">Tài khoản của tôi</a></li>
+                    <li><a href="dangnhap.html">Đăng nhập</a></li>
+                    <li><a href="dangky.html">Đăng ký</a></li>
+                </ul>
+            </div>
+            <div>
+                <ul>
+                    <span>Sản phẩm</span>
+                    <li><a href="giohang.html">Giỏ hàng của tôi</a></li>
+                    <li><a href="#">Khuyến mãi</a></li>
+                    <li><a href="#">Kinh nghiệm mua hàng</a></li>
+                </ul>
+            </div>
+            <div>
+                <div>
+                    <p>Cửa hàng điện máy</p>
+                    <p>Address: Khu 7, Thị trấn Trạm Trôi, Hoài Đức, Hà Nội</p>
+                </div>
+                <div>
+                    <p><a href="#">Powered By Open Cart</a></p>
+                    <span>
+                        <img src="../img/bocongthuong.png" alt="" width="90">
+                    </span>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>

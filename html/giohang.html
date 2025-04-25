@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Giỏ hàng </title>
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/giohang.css">
+    <link rel="stylesheet" href="../css/modal.css">
+    <link rel="stylesheet" href="../css/header.css">
+    <link rel="stylesheet" href="../css/topnav.css">
+    <script src="https://kit.fontawesome.com/92c6e77706.js" crossorigin="anonymous"></script>
+    <script src="../js/jquery-3.6.0.min.js"></script>
+    <script src="../js/giohang.js"></script>
+    <script src="../js/taikhoan.js"></script>
+    <script src="../js/responsive.js"></script>
+</head>
+
+<body>
+    <header>
+        <a href="trangchu.html" class="logo reloadTrang">
+            <img src="../img/logo.jpg" width="30" height="30" alt="logo ">
+            Store
+        </a>
+        <div class="search-container">
+            <form id="formSearch">
+                <input type="text" placeholder="Tìm kiếm sản phẩm  ..." id="inputTimkiem" name="search">
+                <button id="btnTimkiem"><i class="fa fa-search"></i></button>
+            </form>
+        </div>
+        <div class="header-right">
+            <a class="giohang" href="giohang.html">Giỏ hàng</a>
+            <div class="dropdown" id="dkdn">
+                <button class="dropbtn" onclick="toggle_dropdown()">Tài khoản
+                    <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-content" id="myDropdown">
+                    <a href="dangky.html">Đăng ký</a>
+                    <a href="dangnhap.html">Đăng nhập</a>
+                </div>
+            </div>
+            <div id="divTaikhoan" class="dropdown">
+                <button id="taikhoan" class="dropbtn"></button>
+                <div class="dropdown-content" id="ttTaikhoan">
+                    <ul id="info">
+                        <li><b>Tên đăng nhập: </b><span id="tenDangnhap"></span></li>
+                        <li><b>Mật khẩu: </b><span id="matkhau"></span><span id="passEye"><img width="22"
+                                    src="../img/closePassEye.png" alt=""></span></li>
+                        <li><b>Họ và tên: </b><span id="hoten"></span></li>
+                        <li><b>Số điện thoại: </b><span id="sdt"></span></li>
+                    </ul>
+                    <div>
+                        <button type="button" id="doiMK">Đổi mật khẩu</button>
+                        <button type="button" id="dangXuat">Đăng xuất</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <nav class="topnav" id="myTopnav">
+        <a href="trangchu.html">Trang chủ</a>
+        <a href="danhsachsanpham.html">Danh sách sản phẩm</a>
+        
+        
+        <a href="javascript:void(0);" class="icon" onclick="respond_topnav()">
+            <i class="fa fa-bars"></i>
+        </a>
+    </nav>
+    <main>
+        <div>
+            <h3>Các sản phẩm bạn đã cho vào giỏ hàng:</h3>
+            <div id="container">
+                <div id="thongtinKhachHang">
+                    <form action="">
+                        <span>THÔNG TIN KHÁCH HÀNG</span><br>
+                        <div id="phai">
+                            <input type="radio" name="gioitinh" id="anh" checked>
+                            <label for="anh">Anh</label>
+                            <input type="radio" name="gioitinh" id="chi">
+                            <label for="chi">Chị</label>
+                        </div>
+                        <input class="heightInput widthInput" type="text" name="" id="hovaten" placeholder="Họ và tên"
+                            readonly>
+                        <input class="heightInput widthInput" type="tel" name="" id="sodienthoai"
+                            placeholder="Số điện thoại"><br>
+                        <div id="labelCachNhanHang">CHỌN CÁCH THỨC NHẬN HÀNG</div><br>
+                        <div id="radioCachNhanHang">
+                            <div>
+                                <input type="radio" name="nhanhang" id="tannha" checked>
+                                <label for="tannha">Giao tận nơi</label>
+                            </div>
+                            <div>
+                                <input type="radio" name="nhanhang" id="sieuthi">
+                                <label for="sieuthi">Nhận tại cửa hàng</label>
+                            </div>
+                        </div>
+                        <div class="diachi">
+                            <input type="text" id="diachi" class="heightInput" placeholder="Nhập địa chỉ giao hàng">
+                        </div>
+                        <input class="heightInput" type="text" name="" id=""
+                            placeholder="Yêu cầu khác (không bắt buộc)">
+                    </form>
+                </div>
+                <div class="tongTien">
+                    <h4>Tổng tiền</h4>
+                    <div><span id="tongTien">29.850.000</span><sup>đ</sup></div>
+                </div>
+                <div class="datHang">
+                    <button id="datHang" type="button">Đặt hàng</button>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div>
+            <div>
+                <!-- <ul>
+                    <span>Thông tin về</span>
+                    
+                    
+                </ul> -->
+            </div>
+            <div>
+                <ul>
+                    <span>Dịch vụ khách hàng</span>
+                    <li><a href="#">Liên hệ chúng tôi</a></li>
+                    
+                    <li><a href="#">Khuyến mãi</a></li>
+                </ul>
+            </div>
+            <div>
+                <ul>
+                    <span>Tài khoản</span>
+                    <li><a href="#">Tài khoản của tôi</a></li>
+                    <li><a href="dangnhap.html">Đăng nhập</a></li>
+                    <li><a href="dangky.html">Đăng ký</a></li>
+                </ul>
+            </div>
+            <div>
+                <ul>
+                    <span>Sản phẩm</span>
+                    <li><a href="giohang.html">Giỏ hàng của tôi</a></li>
+                    <li><a href="#">Khuyến mãi</a></li>
+                    <li><a href="#">Kinh nghiệm mua hàng</a></li>
+                </ul>
+            </div>
+            <div>
+                <div>
+                    <p>Cửa hàng điện máy</p>
+                    <p>Address: Khu 7, Thị trấn Trạm Trôi, Hoài Đức, Hà Nội</p>
+                </div>
+                <div>
+                    <p><a href="#">Powered By Open Cart</a></p>
+                    <span>
+                        <img src="../img/bocongthuong.png" alt="" width="90">
+                    </span>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Modal -->
+
+    <!-- Modal thông báo đã thêm sản phẩm vào giỏ hàng -->
+    <div id="myModal" class="modal">
+        <div class="modal-content" style="border-radius: 10px; width: 480px;">
+            <div class="modal-body" style="text-align: center; margin-top: 20px;">
+                <img src="../img/iconSuccessfullyOrder.png" width="60" alt="">
+                <h3>Đặt hàng thành công</h3>
+                <h4 style="margin-top: -10px;">Đơn hàng của quý khách đã được đặt</h4>
+                <p>Cảm ơn quý khách đã ủng hộ các sản phẩm của CleanAir.</p>
+                <p style="margin-top: -10px;">Mọi thắc mắc xin liên hệ tổng đài của chúng tôi: 0343594010</p>
+                <h4>Xin hẹn gặp lại!</h4>
+            </div>
+            <div style="text-align: center; margin-bottom: 35px;">
+                <button class="close"
+                    style="width: 130px; padding: 10px 5px; background-color: #60d4ad;border: none; color: black; border-radius: 10px;">OK</button>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
