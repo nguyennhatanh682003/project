@@ -6,7 +6,8 @@ main {
 }
 
 #products {
-    margin: 60px 15%;
+    margin: 60px 16%;
+    padding-left: 108px;
 }
 
 main #products>div {

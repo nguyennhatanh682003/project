@@ -18,12 +18,14 @@ header a {
 }
 
 header a.logo {
-    font-size: 24px;
+    font-size: 44px;
     font-weight: bold;
 }
 
 a.logo img {
     vertical-align: middle;
+    width: 46px;
+    height: 46px;
 }
 
 header a:hover {
@@ -31,11 +33,15 @@ header a:hover {
     color: black;
 }
 
+ 
 header a.giohang {
-    /* background-color: dodgerblue; */
     background-color: #800000;
-
     color: white;
+    margin-right: 10px;
+}
+
+header a.giohang:hover {
+    background-color: #B22222;
 }
 
 .header-right {
@@ -43,10 +49,12 @@ header a.giohang {
 }
 
 #formSearch input[type=text] {
-    padding: 6px;
+    padding: 6px 6px 6px 20px;
     margin-top: 8px;
-    font-size: 17px;
+    font-size: 14px;
     border: none;
+    width: 200px;
+    height: 36px
 }
 
 .search-container {
@@ -61,6 +69,8 @@ header a.giohang {
     font-size: 17px;
     border: none;
     cursor: pointer;
+    width: 46px;
+    height: 46px;
 }
 
 .search-container button:hover {
@@ -121,8 +131,8 @@ header #divTaikhoan {
 
 .dropdown #taikhoan {
     background-color: #ddd;
-    border-radius: 20px;
-    padding: 8px 16px;
+    border-radius: 24px;
+    padding: 12px 18px;
 }
 
 .dropdown:hover #taikhoan {
