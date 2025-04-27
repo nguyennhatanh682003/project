@@ -55,7 +55,7 @@ main>div>div:last-child .rowProducts {
 }
 
 #column2>span:nth-child(2) {
-    color: red;
+    color: #800000;
     font-weight: bold;
     font-size: 25px;
 }
@@ -65,12 +65,12 @@ main>div>div:last-child .rowProducts {
 }
 
 #column2>div:nth-child(3) button {
-    background-color: orangered;
+    background-color: #800000;
     width: 100%;
     color: white;
     font-size: 18px;
     padding: 10px;
-    border-radius: 7px;
+    border-radius: 2px;
 }
 
 #column2 #thongSoKyThuat div {

@@ -39,7 +39,7 @@ main #cacSP_tuongtu .rowProducts {
 }
 
 .product>div .productGia {
-    color: black;
+    color: #800000;
     padding-left: 10px;
     font-weight: bold;
 }
@@ -54,7 +54,9 @@ main #cacSP_tuongtu .rowProducts {
 
 .product>div .productThemGioHang span {
     font-weight: bold;
-    color:rgb(255, 51, 0);
+    /* color:rgb(255, 51, 0); */
+    color: white;
+    font-weight: 600;
 }
 
 /* Footer */
@@ -107,8 +109,7 @@ footer>div>div:nth-child(5) div:last-child {
 
 footer>div>div:nth-child(5) p {
     margin-bottom: -12px;
-    /* color: rgb(212, 201, 201); */
-    color: black;
+    color: white;
     
 }
 
@@ -123,7 +124,7 @@ footer ul {
 
 footer ul span {
     font-size: 16px;
-    color: black;
+    color: white;
     display: block;
     margin-bottom: 10px;
 }
@@ -137,8 +138,7 @@ footer ul li {
 
 footer a {
     text-decoration: none;
-    /* color: rgb(212, 201, 201); */
-    color: black;
+    color: white;
 }
 
 @media (min-width:994px) and (max-width:1380px) {
