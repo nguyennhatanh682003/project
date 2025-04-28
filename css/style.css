@@ -52,6 +52,10 @@ main #cacSP_tuongtu .rowProducts {
     background-color: #800000;
 }
 
+.product>div .productThemGioHang:hover {
+    background-color: #B22222;
+}
+
 .product>div .productThemGioHang span {
     font-weight: bold;
     /* color:rgb(255, 51, 0); */

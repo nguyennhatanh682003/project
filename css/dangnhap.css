@@ -55,6 +55,8 @@ h1 {
     display: inline-block;
     height: 40px;
     color: #666666;
+    padding-left: 8px;
+    width: 388px;
 }
 
 .btn-box {

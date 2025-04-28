@@ -35,6 +35,7 @@
     -webkit-animation-duration: 0.4s;
     animation-name: animatetop;
     animation-duration: 0.4s
+    
 }
 
 
@@ -43,6 +44,7 @@
     padding: 2px 16px;
     /* background-color: lightblue; */
     background-color: #800000;
+    color: white;
 
 }
 
@@ -66,15 +68,14 @@
 }
 
 .modal-body #giaSP{
-    color: red;
+    color: #800000;
     font-weight: bolder;
 }
 
 .modal-footer {
     padding: 2px 16px;
-    /* background-color: lightblue; */
     background-color: #800000;
-
+    color: white;
 }
 
 /* Add Animation */

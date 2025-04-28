@@ -1,6 +1,6 @@
 $(window).ready(function () {
-    $("#messTenDangnhap").css("color", "red")
-    $("#messMatkhau").css("color", "red")
+    $("#messTenDangnhap").css("color", "#800000")
+    $("#messMatkhau").css("color", "#800000")
 
     $("#formDN").submit(function (event) {
         event.preventDefault()

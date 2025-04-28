@@ -43,10 +43,11 @@ main .row input {
     width: 71%;
     height: 30px;
     font-size: 15px;
+    padding-left: 8px;
 }
 
 main .row span {
-    color: red;
+    color: #800000;
 }
 
 main .row div {

@@ -140,14 +140,15 @@ header #divTaikhoan {
 }
 
 .dropdown #taikhoan {
-    background-color: #ddd;
+    background-color: #800000;
     border-radius: 24px;
     padding: 12px 18px;
+    color: white;
 }
 
 .dropdown:hover #taikhoan {
-    color: black;
     font-weight: bold;
+    background-color: #B22222;
 }
 
 #divTaikhoan #ttTaikhoan {

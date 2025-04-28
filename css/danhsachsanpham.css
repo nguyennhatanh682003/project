@@ -1,6 +1,7 @@
 select {
-    height: 30px;
-    font-size: 15px;
+    height: 35px;
+    /* font-size: 15px; */
+    border-radius: 2px;
 }
 
 .boloc {

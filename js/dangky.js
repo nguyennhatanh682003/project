@@ -1,8 +1,8 @@
 $(window).ready(function () {
-    $("#messTenDangnhap").css("color", "red")
-    $("#messMatkhau").css("color", "red")
-    $("#messNLMK").css("color", "red")
-    $("#messNgaysinh").css("color", "red")
+    $("#messTenDangnhap").css("color", "#8000000")
+    $("#messMatkhau").css("color", "#8000000")
+    $("#messNLMK").css("color", "#8000000")
+    $("#messNgaysinh").css("color", "#8000000")
 
     
     $("#txtTenDangnhap").blur(tenDangnhap)

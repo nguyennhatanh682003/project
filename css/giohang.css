@@ -9,6 +9,10 @@ main {
     margin: 50px 0;
 }
 
+.giohang_header {
+    color: #800000;
+}
+
 main>div {
     margin: 0 15%;
 }
@@ -29,6 +33,7 @@ main>div>div #thongtinKhachHang form {
 
 main>div>div #thongtinKhachHang form .heightInput {
     height: 30px;
+    padding-left: 8px;
 }
 
 main>div>div .tongTien {
@@ -45,7 +50,7 @@ main>div>div .tongTien h4 {
 main>div>div .tongTien div {
     float: right;
     margin-top: 17px;
-    color: red;
+    color: #800000;
 }
 
 main>div>div .datHang {
@@ -57,7 +62,7 @@ main>div>div .datHang {
 main>div>div .datHang button {
     width: 100%;
     height: 40px;
-    background-color: #ff3333;
+    background-color: #800000;
     color: white;
     border-radius: 5px;
     font-size: 18px;
@@ -116,7 +121,7 @@ main #cacsanpham .sanpham .tenSanPham {
 main #cacsanpham .sanpham .giaSanPham {
     display: inline-block;
     width: 20%;
-    color: red;
+    color: #800000;
     text-align: right;
 }
 
