@@ -4,12 +4,15 @@ body {
     padding: 0;
 }
 
+/* Khu vực sản phẩm */
 main #products .rowProducts,
 main #cacSP_tuongtu .rowProducts {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(245px, 1fr));
-    grid-auto-columns: 20px;
-    row-gap: 25px;
+    /* grid-auto-columns: 20px; */
+    /* Khoảng cách giữa các cột và hàng */
+    column-gap: 10px;
+    row-gap: 10px;
 }
 
 /* Main */
@@ -34,7 +37,7 @@ main #cacSP_tuongtu .rowProducts {
 .product>div .productTen {
     color: black;
     padding-left: 10px;
-    font-weight: lighter;
+    font-weight: 500;
     height: 43px;
 }
 
@@ -74,12 +77,12 @@ footer>div {
     margin: 0 15%;
 }
 
-footer>div>div:nth-child(1) {
+/* footer>div>div:nth-child(1) {
     display: inline-block;
     margin-right: 130px;
     position: relative;
     top: -25px;
-}
+} */
 
 footer>div>div:nth-child(2) {
     display: inline-block;
@@ -97,7 +100,7 @@ footer>div>div:nth-child(4) {
 
 footer>div>div:nth-child(5) {
     border-top: 1px solid rgb(212, 201, 201);
-    margin-left: -20px;
+    margin-left: -72px;
 }
 
 footer>div>div:nth-child(5) div {
@@ -108,7 +111,7 @@ footer>div>div:nth-child(5) div {
 
 footer>div>div:nth-child(5) div:last-child {
     position: relative;
-    right: -180px;
+    right: -40px;
 }
 
 footer>div>div:nth-child(5) p {
@@ -135,7 +138,7 @@ footer ul span {
 
 footer ul li {
     font-family: 'Open Sans,sans-serif';
-    color: rgb(212, 201, 201);
+    color: white;
     margin-bottom: 5px;
     list-style: none;
 }
@@ -145,115 +148,3 @@ footer a {
     color: white;
 }
 
-@media (min-width:994px) and (max-width:1380px) {
-    footer>div>div:nth-child(1) {
-        margin-right: 40px;
-    }
-
-    footer>div>div:nth-child(2) {
-        margin-right: 40px;
-    }
-
-    footer>div>div:nth-child(3) {
-        margin-right: 40px;
-    }
-
-    footer>div>div:nth-child(5) div:last-child {
-        right: 0;
-    }
-}
-
-@media (max-width:1028px) {
-    footer>div>div:nth-child(5) div {
-        margin-left: 0;
-    }
-}
-
-@media (max-width:994px) {
-    footer>div>div:nth-child(1) {
-        margin-right: 15px;
-    }
-
-    footer>div>div:nth-child(2) {
-        margin-right: 10px;
-    }
-
-    footer>div>div:nth-child(3) {
-        margin-right: 15px;
-    }
-
-    footer>div>div:nth-child(5) div:last-child {
-        right: 0;
-    }
-}
-
-@media (max-width:880px) {
-    footer ul {
-        list-style-type: none;
-    }
-
-    footer>div>div:nth-child(1) {
-        margin-right: 5px;
-    }
-
-    footer>div>div:nth-child(2) {
-        margin-right: 5px;
-    }
-
-    footer>div>div:nth-child(3) {
-        margin-right: 5px;
-    }
-}
-
-@media (max-width:844px) {
-    footer>div>div:nth-child(1) {
-        margin-right: 140px;
-    }
-
-    footer>div>div:nth-child(2) {
-        margin-right: 26px;
-    }
-
-    footer>div>div:nth-child(3) {
-        margin-right: 190px;
-    }
-
-    footer ul {
-        padding-top: 25px;
-        padding-bottom: 0;
-    }
-}
-
-@media (max-width:672px) {
-    footer>div>div:nth-child(1) {
-        margin-right: 100px;
-    }
-
-    footer>div>div:nth-child(3) {
-        margin-right: 149px;
-    }
-}
-
-@media (max-width:616px) {
-    footer>div>div:nth-child(1) {
-        margin-right: 75px;
-    }
-
-    footer>div>div:nth-child(3) {
-        margin-right: 124px;
-    }
-}
-
-@media (max-width:580px) {
-    footer>div div {
-        width: 100%;
-    }
-
-    footer ul {
-        padding: 0;
-    }
-
-    footer>div>div:nth-child(1)>ul {
-        padding-top: 50px;
-    }
-}

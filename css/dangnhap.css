@@ -25,9 +25,10 @@ main {
 
 h1 {
     color: #800000;
-    font-size: 20px;
+    font-size: 40px;
     margin-bottom: 30px;
-    
+    display: flex;
+    justify-content: center;
 }
 .register-form {
     width: 100%;

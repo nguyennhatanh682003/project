@@ -23,6 +23,7 @@ main .container {
 .register-form h2 {
     text-align: center;
     color: #800000;
+    font-size: 40px;
 }
 
 main .row {
@@ -57,6 +58,7 @@ main .row div {
 main h4 {
     text-align: center;
     color: #800000;
+    font-size: 20px;
 }
 
 main #ngaysinh {
