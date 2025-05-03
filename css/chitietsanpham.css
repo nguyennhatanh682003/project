@@ -1,27 +1,27 @@
+/* Reset */
 * {
     box-sizing: border-box;
 }
 
 main {
-    border-top: 1px solid #706e6e;
-    width: 100%;
-    margin: 50px 0;
-    min-height: 700px;
+    margin: 100px 0;
 }
 
 main>div {
-    margin: 30px 15%;
+    margin: 30px 8%;
 }
 
 main>div>div:first-child {
-    border-bottom: 1px solid #c7c5c5;
-}
-
-main>div>div:nth-child(2) {
-    margin-top: 10px;
+    border-bottom: 1px solid #800000;
     padding-bottom: 10px;
 }
 
+main>div>div:nth-child(2) {
+    margin-top: 50px;
+    padding-bottom: 10px;
+}
+
+/* Chèn float cho các cột */
 main>div>div:nth-child(2):after {
     content: "";
     display: table;
@@ -34,21 +34,25 @@ main>div>div:nth-child(2) .column {
 
 main>div div:nth-child(2) #column1 {
     width: 60%;
-    padding-right: 20px;
+    padding-right: 150px;
 }
 
+/* Hình ảnh của sản phẩm */
+main #hinhanhSP {
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+main #hinhanhSP:hover {
+    opacity: 0.9;
+}
+
+/* Cột thông tin */
 main>div div:nth-child(2) #column2 {
     width: 40%;
 }
 
-main>div>div:last-child .rowProducts {
-    margin-bottom: 10px;
-}
-
-.rowProducts .product .productImg {
-    height: 140px;
-}
-
+/* Giá */
 #column2>span:nth-child(1) {
     font-weight: bold;
     font-size: 20px;
@@ -60,8 +64,9 @@ main>div>div:last-child .rowProducts {
     font-size: 25px;
 }
 
+/* Nút mua */
 #column2>div:nth-child(3) {
-    margin-top: 10px;
+    margin: 30px 0;
 }
 
 #column2>div:nth-child(3) button {
@@ -69,17 +74,19 @@ main>div>div:last-child .rowProducts {
     width: 100%;
     color: white;
     font-size: 18px;
-    padding: 10px;
+    padding: 14px;
     border-radius: 2px;
 }
 
+/* Thông số kĩ thuật */
 #column2 #thongSoKyThuat div {
-    clear: both;
+    /* Đảm bảo không bị lỗi layout bởi float */
+    clear: both; 
 }
 
 #thongSoKyThuat .row {
     width: 100%;
-    padding: 10px;
+    padding: 14px;
     line-height: 25px;
 }
 
@@ -93,44 +100,27 @@ main>div>div:last-child .rowProducts {
     float: right;
 }
 
+
+/* Footer */
 footer {
     clear: both;
 }
 
-main #hinhanhSP {
-    cursor: pointer;
-    transition: 0.3s;
-}
-
-main #hinhanhSP:hover {
-    opacity: 0.7;
-}
-
-/* The Modal (background) */
+/* Modal(Zoom ảnh) */
 .modal {
     display: none;
-    /* Hidden by default */
-    position: fixed;
-    /* Stay in place */
+    position: fixed; /* Stay in place */
     z-index: 1;
-    /* Sit on top */
     padding-top: 100px;
-    /* Location of the box */
     left: 0;
     top: 0;
     width: 100%;
-    /* Full width */
     height: 100%;
-    /* Full height */
-    overflow: auto;
-    /* Enable scroll if needed */
-    background-color: rgb(0, 0, 0);
-    /* Fallback color */
+    overflow: auto; /* Enable scroll if needed */
     background-color: rgba(0, 0, 0, 0.9);
-    /* Black w/ opacity */
 }
 
-/* Modal Content (image) */
+/* Modal(hình ảnh) */
 .modal .modal-content {
     margin: auto;
     display: block;
@@ -138,7 +128,7 @@ main #hinhanhSP:hover {
     max-width: 700px;
 }
 
-/* Caption of Modal Image */
+/* Chú thích Modal(hình ảnh)*/
 .modal #caption {
     margin: auto;
     display: block;
@@ -146,7 +136,7 @@ main #hinhanhSP:hover {
     max-width: 700px;
     text-align: center;
     color: #ccc;
-    padding: 10px 0;
+    padding: 20px 0;
     height: 150px;
 }
 
@@ -155,6 +145,7 @@ main #hinhanhSP:hover {
 .modal #caption {
     -webkit-animation-name: zoom;
     -webkit-animation-duration: 0.6s;
+    /* Đảm bảo tương thích với nhiều trình duyệt */
     animation-name: zoom;
     animation-duration: 0.6s;
 }
@@ -169,6 +160,7 @@ main #hinhanhSP:hover {
     }
 }
 
+/* Đảm bảo tương thích nhiều trình duyệt */
 @keyframes zoom {
     from {
         transform: scale(0)
@@ -179,12 +171,12 @@ main #hinhanhSP:hover {
     }
 }
 
-/* The Close Button */
+/* Nút đóng Modal */
 .modal .close {
     position: absolute;
     top: 15px;
     right: 35px;
-    color: #f1f1f1;
+    color: #ccc;
     font-size: 40px;
     font-weight: bold;
     transition: 0.3s;
@@ -192,31 +184,18 @@ main #hinhanhSP:hover {
 
 .modal .close:hover,
 .modal .close:focus {
-    color: #bbb;
-    text-decoration: none;
+    color: #800000;
     cursor: pointer;
 }
 
-@media (max-width:913px) {
-
-    main>div div:nth-child(2) #column1,
-    main>div div:nth-child(2) #column2 {
-        width: 100%;
-    }
-}
-
-@media (max-width:426px) {
-
-    #thongSoKyThuat .row .colTitle,
-    #thongSoKyThuat .row .colContent {
-        width: 100%;
-    }
-
-    #thongSoKyThuat .row .colTitle {
-        font-weight: bold;
-    }
-}
-
+/* Danh sách sản phẩm tương tự */
 #cacSP_tuongtu {
     color: #800000;
+}
+main>div>div:last-child .rowProducts {
+    margin-bottom: 12px ;
+}
+
+.rowProducts .product .productImg {
+    height: 100px;
 }

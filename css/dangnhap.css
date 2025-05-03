@@ -2,25 +2,17 @@ body {
     font-family: Arial, Helvetica, sans-serif;
 }
 
-img {
-    max-height: 100%;
-    max-width: 100%;
+main {
+    width: 100%;
+    margin: 122px 0;
 }
 
 .container {
     width: 100%;
     max-width: 1200px;
+    /* Căn giữa */
     margin-left: auto;
     margin-right: auto;
-}
-
-main {
-    border-top: 1px solid #706e6e;
-    width: 100%;
-    margin: 50px 0;
-    background-color: #dbedf9;
-    padding-bottom: 5px;
-    padding: 30px 0;
 }
 
 h1 {
@@ -36,33 +28,34 @@ h1 {
     margin: 20px auto;
     background-color: #ffffff;
     padding: 15px;
-    border: 2px solid #cccccc;
-    border-radius: 10px;
+    border: 1px solid #800000;
+    border-radius: 6px;
 }
 
 .input-box {
-    margin-bottom: 10px;
+    margin-bottom: 20px;
 }
 
+/* Báo lỗi */
 .input-box div{
     margin-bottom: 5px;
 }
 
 .input-box input{
-    width: 100%;
-    border: 1px solid #cccccc;
+    /* width: 100%; */
+    border: 1px solid #800000;
     outline: none;
     font-size: 16px;
     display: inline-block;
     height: 40px;
-    color: #666666;
-    padding-left: 8px;
+    color: #b22222;
+    padding-left: 12px;
     width: 388px;
 }
 
 .btn-box {
     text-align: right;
-    margin-top: 30px;
+    margin-top: 20px;
 }
 
 .btn-box button {
@@ -73,10 +66,8 @@ h1 {
     border: none;
     outline: none;
     font-size: large;
+    width: 136px;
+    height: 46px;
+
 }
 
-@media (max-width:426px) {
-    .register-form {
-        max-width: 260px;
-    }
-}

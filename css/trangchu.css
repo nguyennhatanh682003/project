@@ -1,15 +1,16 @@
 main {
-    border-top: 1px solid #706e6e;
+    /* border-top: 1px solid #706e6e;
     border-bottom: 1px solid #706e6e;
-    width: 100%;
-    margin: 50px 0;
+    width: 100%; */
+    margin: 150px 0;
+    padding-bottom: 20px;
 }
 
-#products {
+#products { 
     margin: 60px 16%;
-    padding-left: 108px;
+    padding-left: 50px;
 }
 
 main #products>div {
-    margin-bottom: 30px;
+    margin-bottom: 35px;
 }

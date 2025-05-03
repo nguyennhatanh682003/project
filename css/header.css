@@ -2,7 +2,8 @@ header {
     background-color: rgb(242, 246, 250);
     border: 1px solid black;
     padding: 6px 14%;
-    overflow: hidden;
+    /* Ngăn phần tử con tràn ra ngoài */
+    overflow: hidden; 
 }
 
 header a {
@@ -15,15 +16,16 @@ header a {
     font-size: 18px;
     line-height: 25px;
     border-radius: 4px;
+    color: #800000;
 }
 
 header a.logo {
     font-size: 44px;
     font-weight: bold;
-    color: #800000;
 }
 
 a.logo img {
+    /* Căn giữa ảnh theo chữ */
     vertical-align: middle;
     width: 46px;
     height: 46px;
@@ -34,22 +36,7 @@ header a:hover {
     color: #B22222;
 }
 
- 
-header a.giohang {
-    background-color: #800000;
-    color: white;
-    margin-right: 10px;
-    border-radius: 2px;
-}
-
-header a.giohang:hover {
-    background-color: #B22222;
-}
-
-.header-right {
-    float: right;
-}
-
+/* Thanh tìm kiếm */
 #formSearch input[type=text] {
     padding: 6px 100px 6px 18px;
     margin-top: 8px;
@@ -81,6 +68,22 @@ header a.giohang:hover {
     background: #B22222;
 }
 
+.header-right {
+    float: right;
+    margin-top: 10px;
+}
+
+header a.giohang {
+    background-color: #800000;
+    color: white;
+    margin-right: 10px;
+    border-radius: 2px;
+}
+
+header a.giohang:hover {
+    background-color: #B22222;
+}
+
 .dropdown {
     float: left;
     overflow: hidden;
@@ -101,7 +104,7 @@ header a.giohang:hover {
     border-radius: 2px;
 }
 
-.dropdown:hover .dropbtn,
+.dropdown:hover .dropbtn, 
 .dropbtn:focus {
     background-color: #B22222;
     color: white;
@@ -147,13 +150,12 @@ header #divTaikhoan {
 }
 
 .dropdown:hover #taikhoan {
-    font-weight: bold;
     background-color: #B22222;
 }
 
 #divTaikhoan #ttTaikhoan {
     background-color: #ddd;
-    max-width: 320px;
+    /* max-width: 320px; */
     border-radius: 8px;
     padding: 0 5px;
     right: 10px;
@@ -163,14 +165,6 @@ header #divTaikhoan {
     list-style: none;
     width: 100%;
     margin-left: -35px;
-}
-
-#ttTaikhoan button {
-    font-size: 15px;
-}
-
-#ttTaikhoan button:hover {
-    cursor: pointer;
 }
 
 #info li {
@@ -184,6 +178,14 @@ header #divTaikhoan {
 #ttTaikhoan div {
     text-align: center;
     margin-bottom: 10px;
+}
+
+#ttTaikhoan button {
+    font-size: 15px;
+}
+
+#ttTaikhoan button:hover {
+    cursor: pointer;
 }
 
 #ttTaikhoan div button {
@@ -202,8 +204,13 @@ header #divTaikhoan {
 #ttTaikhoan div button:last-child {
     background-color: #800000;
     color: white;
-    padding: 10px 15px;
+    padding: 10px 26px;
     font-weight: bold;
+    margin-top: 6px;
+}
+
+#ttTaikhoan div button:last-child:hover {
+    background-color: #B22222;
 }
 
 .show {
@@ -211,30 +218,3 @@ header #divTaikhoan {
     
 }
 
-@media screen and (max-width: 913px) {
-    .header-right {
-        margin-top: 5px;
-    }
-}
-
-@media screen and (max-width: 376px) {
-    header a {
-        display: block;
-        float: none;
-        text-align: left;
-    }
-
-    header a.giohang {
-        width: 107px;
-        margin-bottom: 5px;
-    }
-
-    .search-container {
-        float: none;
-        margin-bottom: 15px;
-    }
-
-    .header-right {
-        float: none;
-    }
-}

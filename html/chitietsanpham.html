@@ -15,31 +15,35 @@
     <script src="../js/jquery-3.6.0.min.js"></script>
     <script type="module" src="../js/chitietsanpham.js"></script>
     <script src="../js/taikhoan.js"></script>
-    <script src="../js/responsive.js"></script>
+    <script src="../js/dropdown.js"></script>
+    
+    <!-- Phóng to hình ảnh sản phẩm -->
     <script>
         document.onreadystatechange = function () {
-            // Get the modal
+            // Lấy modal
             var modal = document.getElementById("myModal")
 
-            // Get the image and insert it inside the modal - use its "alt" text as a caption
+            // Lấy hình ảnh và chèn vào bên trong modal - sử dụng văn bản "alt" của hình ảnh làm chú thích
             var img = document.getElementById("hinhanhSP")
             var modalImg = document.getElementById("zoom_sitemap")
             var captionText = document.getElementById("caption")
 
+            // Kiểm tra chiều cao ảnh -> nếu ảnh nhỏ hơn 20px thì thoát hàm
             if (img.clientHeight < 20) {
                 return
             }
 
+            // Sự kiện khi nhấn vào hình ảnh
             img.onclick = function () {
                 modal.style.display = "block"
-                modalImg.src = this.src
+                modalImg.src = this.src // dùng đường dẫn của ảnh để phóng to
                 captionText.innerHTML = this.alt
             }
 
-            // Get the <span> element that closes the modal
+            // Đóng modal
             var span = document.getElementsByClassName("close")[0]
 
-            // When the user clicks on <span> (x), close the modal
+            // Sự kiện khi nhấn nút đóng
             span.onclick = function () {
                 modal.style.display = "none"
             }
@@ -51,7 +55,6 @@
     <header>
         <a href="trangchu.html" class="logo reloadTrang">
             <img src="../img/logo.jpg" width="30" height="30" alt="logo">
-            
             Store
         </a>
         <div class="search-container">
@@ -93,10 +96,8 @@
         <a href="trangchu.html">Trang chủ</a>
         <a href="danhsachsanpham.html">Danh sách sản phẩm</a>
         
-       
-        <a href="javascript:void(0);" class="icon" onclick="respond_topnav()">
-            <i class="fa fa-bars"></i>
-        </a>
+        
+        
     </nav>
     <main>
         <div>
@@ -106,7 +107,7 @@
             <div>
                 <div id="column1" class="column">
                     <div>
-                        <img src="../img/panasonicInverter1HP_2.png" width="100%" alt="Hình ảnh về sản phẩm"
+                        <img src="../img/panasonicInverter1HP_2.png" width="100%" alt="Hình ảnh chi tiết về sản phẩm"
                             id="hinhanhSP">
                     </div>
                 </div>
@@ -117,7 +118,7 @@
                         <button id="muangay">MUA NGAY</button>
                     </div>
                     <h3>
-                        Thông số kỹ thuật Máy lạnh <span class="tenSP"></span>
+                        Thông số kỹ thuật máy lạnh <span class="tenSP"></span>
                     </h3>
                     <div id="thongSoKyThuat">
                         <div class="row">
@@ -125,11 +126,11 @@
                             <span class="colContent" id="loaiMay"></span>
                         </div>
                         <div class="row">
-                            <span class="colTitle">Công suất làm lạnh:</span>
+                            <span class="colTitle">Công suất:</span>
                             <span class="colContent" id="congsuat"></span>
                         </div>
                         <div class="row">
-                            <span class="colTitle">Phạm vi làm lạnh hiệu quả:</span>
+                            <span class="colTitle">Phạm vi làm lạnh:</span>
                             <span class="colContent" id="phamviLamlanh"></span>
                         </div>
                         <div class="row">
@@ -160,12 +161,14 @@
             </div>
         </div>
     </main>
-    <!-- The Modal shows zoomed image -->
+
+    <!-- The Modal hiển thị hình ảnh -->
     <div id="myModal" class="modal">
         <span class="close">&times;</span>
         <img class="modal-content" id="zoom_sitemap">
         <div id="caption"></div>
     </div>
+
     <footer>
         <div>
             <div>
@@ -179,7 +182,6 @@
                 <ul>
                     <span>Dịch vụ khách hàng</span>
                     <li><a href="#">Liên hệ chúng tôi</a></li>
-                    
                     <li><a href="#">Khuyến mãi</a></li>
                     <li><a href="#">Chế độ hậu mãi</a></li>
 
@@ -205,11 +207,7 @@
                 <div>
                     <p>Cửa hàng điện máy</p>
                     <p>Address: Khu 7, Thị trấn Trạm Trôi, Hoài Đức, Hà Nội</p>
-                </div>
-                <div>
-                    <p>Điện thoại: 0123456789</p>
-                    <p>Email:
-            </div>
+                </div> 
         </div>
     </footer>
 </body>

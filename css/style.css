@@ -61,7 +61,6 @@ main #cacSP_tuongtu .rowProducts {
 
 .product>div .productThemGioHang span {
     font-weight: bold;
-    /* color:rgb(255, 51, 0); */
     color: white;
     font-weight: 600;
 }

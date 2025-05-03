@@ -1,8 +1,7 @@
 .topnav {
-    /* background-color: lightblue; */
     background-color: #800000;
     border: 1px solid black;
-    padding: 0 15%;
+    padding: 0 14%;
     overflow: hidden;
 }
 
@@ -26,47 +25,3 @@
     color: white;
 }
 
-.topnav .icon {
-    display: none;
-}
-
-@media screen and (max-width: 1153px) {
-    .topnav a {
-        padding: 14px 26px;
-    }
-}
-
-@media screen and (max-width: 1038px) {
-    .topnav a {
-        padding: 14px 16px;
-    }
-}
-
-@media screen and (max-width: 924px) {
-    .topnav a:not(:first-child) {
-        display: none;
-    }
-
-    .topnav a.icon {
-        float: right;
-        display: block;
-    }
-}
-
-@media screen and (max-width: 924px) {
-    .topnav.responsive {
-        position: relative;
-    }
-
-    .topnav.responsive .icon {
-        position: absolute;
-        right: 0;
-        top: 0;
-    }
-
-    .topnav.responsive a {
-        float: none;
-        display: block;
-        text-align: left;
-    }
-}

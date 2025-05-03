@@ -1,39 +1,37 @@
 main {
     margin: 50px 0;
-    background-color: #dbedf9;
     font-family: Arial, Helvetica, sans-serif;
-    border-top: 1px solid black;
-    padding-bottom: 5px;
 }
 
 main .container {
     background-color: white;
     margin: 50px auto;
     width: 600px;
-    border: 1px solid #cccccc;
-    border-radius: 8px;
-    padding: 10px;
+    border: 1px solid #800000;
+    border-radius: 6px;
+    padding: 30px;
 }
 
 .container .register-form {
     width: 100%;
-    margin: 20px auto;
+    margin: 10px auto;
 }
 
 .register-form h2 {
     text-align: center;
     color: #800000;
-    font-size: 40px;
+    font-size: 36px;
 }
 
 main .row {
-    margin: 15px 0;
+    margin: 14px 0;
 }
 
 main .row label {
     text-align: right;
     display: inline-block;
     width: 24%;
+    color: #800000;
 }
 
 main #gioitinh label:first-child{
@@ -42,9 +40,11 @@ main #gioitinh label:first-child{
 
 main .row input {
     width: 71%;
-    height: 30px;
+    height: 36px;
     font-size: 15px;
     padding-left: 8px;
+    border: 1px solid #800000;
+    color: #b22222;
 }
 
 main .row span {
@@ -70,8 +70,8 @@ main #gioitinh label {
 }
 
 main #gioitinh input {
-    width: 15px;
-    height: 15px;
+    width: 16px;
+    height: 16px;
 }
 
 main .row:last-child {
@@ -81,34 +81,12 @@ main .row:last-child {
 main .row:last-child button {
     color: white;
     background-color: #800000;
-    border-radius: 5px;
+    border-radius: 2px;
     border: none;
     font-size: 17px;
     padding: 6px 8px;
-    margin: 0 2px;
+    margin: 10px 10px;
+    width: 136px;
+    height: 46px;
 }
 
-@media (max-width:688px) {
-    main .container {
-        width: 80%;
-    }
-}
-
-@media (max-width:558px) {
-    main .row label {
-        width: 100%;
-        text-align: left;
-    }
-
-    main #gioitinh label:first-child{
-        margin-left: 0;
-    }
-
-    main .row input {
-        width: 93%;
-    }
-
-    main .row div {
-        margin-left: 0;
-    }
-}

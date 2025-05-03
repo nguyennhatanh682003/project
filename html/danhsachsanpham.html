@@ -16,7 +16,8 @@
     <script src="../js/jquery-3.6.0.min.js"></script>
     <script type="module" src="../js/danhsachsanpham.js"></script>
     <script src="../js/taikhoan.js"></script>
-    <script src="../js/responsive.js"></script>
+    <script src="../js/dropdown.js"></script>
+    
 </head>
 
 <body>
@@ -65,22 +66,20 @@
         <a href="danhsachsanpham.html" class="active">Danh sách sản phẩm</a>
         
         
-        <a href="javascript:void(0);" class="icon" onclick="respond_topnav()">
-            <i class="fa fa-bars"></i>
-        </a>
+        
     </nav>
     <main>
         <div id="products">
             <div id="bolocThongtinSP">
                 <select name="congsuat" id="congsuat" class="boloc">
-                    <option value="congsuat">Công suất làm lạnh</option>
+                    <option value="congsuat">Công suất máy </option>
                     <option value="1">1 HP</option>
                     <option value="1.5">1.5 HP</option>
                     <option value="2">2 HP</option>
                     <option value="2.5">2.5 HP</option>
                 </select>
                 <select name="hang" id="hang" class="boloc">
-                    <option value="hang">Hãng</option>
+                    <option value="hang">Hãng máy</option>
                     <option value="Panasonic">Panasonic</option>
                     <option value="Daikin">Daikin</option>
                     <option value="Sharp">Sharp</option>
@@ -93,28 +92,28 @@
                     <option value="Kangaroo">Kangaroo</option>
                 </select>
                 <select name="gia" id="gia" class="boloc">
-                    <option value="gia">Giá</option>
+                    <option value="gia">Giá thành</option>
                     <option value="low7tr">Dưới 7 triệu</option>
-                    <option value="7to9tr">Từ 7tr - 9tr</option>
-                    <option value="9to12tr">Từ 9tr - 12tr</option>
-                    <option value="12to15tr">Từ 12tr - 15tr</option>
+                    <option value="7to9tr">Từ 7 triệu - 9 triệu</option>
+                    <option value="9to12tr">Từ 9 triệu - 12 triệu</option>
+                    <option value="12to15tr">Từ 12 triệu - 15 triệu</option>
                     <option value="up20tr">Trên 15 triệu</option>
-                </select>
+                </select>   
                 <select style="width: 304px;" name="tienich" id="tienich" class="boloc">
                     <option value="tienich">Tiện ích</option>
-                    <option value="ngudem">Chế độ ngủ đêm tránh buốt</option>
-                    <option value="thoigiodechiu">Thổi gió dễ chịu Comfort Air (cho trẻ em, người già)</option>
-                    <option value="wifi">Có wifi, chỉnh bằng điện thoại</option>
-                    <option value="hengio">Hẹn giờ bật tắt máy</option>
-                    <option value="lamlanhnhanh">Làm lạnh nhanh tức thì</option>
+                    <option value="ngudem">Chế độ ban đêm</option>
+                    <option value="thoigiodechiu">Chế độ thổi gió dễ chịu</option>
+                    <option value="wifi">Có wifi, có thể điều chỉnh bằng điện thoại</option>
+                    <option value="hengio">Hẹn giờ tắt/bật </option>
+                    <option value="lamlanhnhanh">Làm lạnh nhanh </option>
                     <option value="tukhoidong">Tự khởi động lại khi có điện</option>
                 </select>
             </div>
             <div id="boloc_theo_gia">
                 <select name="xeptheo" id="xeptheo" style="font-size: 13px;">
-                    <option value="macdinh">Xếp theo: Mặc định</option>
-                    <option value="caodenthap">Xếp theo: Giá cao đến thấp</option>
-                    <option value="thapdencao">Xếp theo: Giá thấp đến cao</option>
+                    <option value="macdinh">Sắp xếp theo: Mặc định</option>
+                    <option value="caodenthap">Giá từ cao đến thấp</option>
+                    <option value="thapdencao">Giá từ thấp đến cao</option>
                 </select>
             </div>
         </div>
@@ -157,7 +156,7 @@
             <div>
                 <div>
                     <p>Cửa hàng điện máy</p>
-                    <p>Address: Address: Khu 7, Thị trấn Trạm Trôi, Hoài Đức, Hà Nội</p>
+                    <p>Address: Khu 7, Thị trấn Trạm Trôi, Hoài Đức, Hà Nội</p>
                 </div>
                 
             </div>
